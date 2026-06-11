@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  transition: background var(--transition), backdrop-filter var(--transition), border-bottom var(--transition);
+}
+
+.navbar--scrolled {
+  background: rgba(12, 12, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__logo {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  transition: color var(--transition);
+}
+.navbar__logo:hover { color: var(--accent); }
+.navbar__logo-bracket { color: var(--accent); }
+
+.navbar__links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+  position: relative;
+}
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+.navbar__link:hover { color: var(--text); }
+.navbar__link:hover::after { width: 100%; }
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__lang {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0.08em;
+}
+.navbar__lang:hover { color: var(--accent); border-color: var(--accent); }
+
+.navbar__cv {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  padding: 6px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  transition: background var(--transition), color var(--transition);
+  letter-spacing: 0.04em;
+}
+.navbar__cv:hover { background: var(--accent); color: var(--bg); }
+
+@media (max-width: 768px) {
+  .navbar { padding: 16px 24px; }
+  .navbar__links { display: none; }
+}

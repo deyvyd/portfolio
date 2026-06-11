@@ -1,0 +1,124 @@
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact__sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 20px;
+  max-width: 380px;
+}
+
+.contact__right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact__email-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  overflow: hidden;
+}
+
+.contact__email-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-dim) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.contact__email-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(91, 139, 245, 0.15);
+}
+
+.contact__email-btn:hover::before {
+  opacity: 1;
+}
+
+.contact__email-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.contact__email-addr {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  position: relative;
+}
+
+.contact__arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 20px;
+  color: var(--accent);
+  transition: transform var(--transition);
+}
+
+.contact__email-btn:hover .contact__arrow {
+  transform: translate(2px, -2px);
+}
+
+.contact__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact__or {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.contact__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact__link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.contact__link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
