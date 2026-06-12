@@ -14,7 +14,16 @@ export const stats = [
   { value: 3, suffix: '' },
 ]
 
-export const projects = [
+export const projects: Array<{
+  id: 'docgen' | 'moneytalks' | 'homestock'
+  title: string
+  tags: string[]
+  metric: { value: string }
+  accent: string
+  live: string | null
+  livePt?: string
+  repo: string | null
+}> = [
   {
     id: 'docgen',
     title: 'DocGen',
