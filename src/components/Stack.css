@@ -1,23 +1,28 @@
-.stack__grid {
+.stack__groups {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-.stack__item {
+.stack__group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 16px;
+  gap: 12px;
+  padding: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--group-color);
   border-radius: var(--radius);
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   opacity: 0;
   transform: translateY(8px);
+  transition: box-shadow var(--transition);
 }
 
-.section--visible .stack__item {
+.stack__group:hover {
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--group-color) 12%, transparent);
+}
+
+.section--visible .stack__group {
   animation: stackReveal 0.4s ease forwards;
 }
 
@@ -25,23 +30,51 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.stack__item:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(91, 139, 245, 0.1);
-}
-
-.stack__category {
+.stack__group-label {
   font-family: var(--font-mono);
   font-size: 9px;
-  color: var(--accent);
+  color: var(--group-color);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.stack__name {
+.stack__group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stack__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted, var(--text));
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.stack__chip:hover {
+  border-color: var(--group-color);
   color: var(--text);
+}
+
+.stack__chip-icon {
+  display: flex;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.stack__chip-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
 }

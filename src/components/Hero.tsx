@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Terminal } from './Terminal'
 import { Counter } from './Counter'
 import { stats, meta } from '../data'
+import { useTranslation } from '../i18n'
 import { useInView } from '../hooks/useInView'
 import './Hero.css'
 
@@ -12,17 +13,12 @@ interface HeroProps {
 export function Hero({ lang }: HeroProps) {
   const { ref, inView } = useInView(0.1)
   const [countersActive, setCountersActive] = useState(false)
+  const t = useTranslation(lang)
 
   useEffect(() => {
-    const t = setTimeout(() => setCountersActive(true), 4000)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => setCountersActive(true), 4000)
+    return () => clearTimeout(timer)
   }, [])
-
-  const headline = lang === 'en'
-    ? { pre: 'Full-Stack Engineer', post: 'who ships products\nthat move numbers.' }
-    : { pre: 'Engenheiro Full-Stack', post: 'que entrega produtos\nque movem números.' }
-
-  const scrollLabel = lang === 'en' ? 'Scroll to explore' : 'Role para explorar'
 
   return (
     <section
@@ -37,13 +33,13 @@ export function Hero({ lang }: HeroProps) {
         <div className="hero__left">
           <div className="hero__eyebrow">
             <span className="hero__dot" aria-hidden="true" />
-            <span>{meta.location} · Available for remote</span>
+            <span>{meta.location} · {t.meta.availability}</span>
           </div>
 
           <h1 className="hero__headline">
-            <span className="hero__headline-role">{headline.pre}</span>
+            <span className="hero__headline-role">{t.hero.rolePrefix}</span>
             <span className="hero__headline-main">
-              {headline.post.split('\n').map((line, i) => (
+              {t.meta.tagline.split('\n').map((line, i) => (
                 <span key={i} className="hero__headline-line">{line}</span>
               ))}
             </span>
@@ -55,30 +51,26 @@ export function Hero({ lang }: HeroProps) {
                 key={i}
                 value={s.value}
                 suffix={s.suffix}
-                label={s.label}
+                label={t.stats[i]}
                 active={countersActive}
               />
             ))}
           </div>
 
           <div className="hero__cta">
-            <a href="#work" className="hero__cta-primary">
-              {lang === 'en' ? 'See my work' : 'Ver projetos'}
-            </a>
-            <a href="#contact" className="hero__cta-secondary">
-              {lang === 'en' ? 'Get in touch' : 'Entrar em contato'}
-            </a>
+            <a href="#work" className="hero__cta-primary">{t.hero.ctaPrimary}</a>
+            <a href="#contact" className="hero__cta-secondary">{t.hero.ctaSecondary}</a>
           </div>
         </div>
 
         <div className="hero__right">
-          <Terminal />
+          <Terminal lang={lang} />
         </div>
       </div>
 
-      <div className="hero__scroll" aria-label={scrollLabel}>
+      <div className="hero__scroll" aria-label={t.hero.scrollLabel}>
         <span className="hero__scroll-line" aria-hidden="true" />
-        <span className="hero__scroll-label">{scrollLabel}</span>
+        <span className="hero__scroll-label">{t.hero.scrollLabel}</span>
       </div>
     </section>
   )

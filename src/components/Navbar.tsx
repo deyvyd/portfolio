@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { meta } from '../data'
+import { useTranslation } from '../i18n'
 import './Navbar.css'
 
 interface NavbarProps {
@@ -9,6 +10,7 @@ interface NavbarProps {
 
 export function Navbar({ lang, onToggleLang }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
+  const t = useTranslation(lang)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -16,9 +18,12 @@ export function Navbar({ lang, onToggleLang }: NavbarProps) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const links = lang === 'en'
-    ? [{ label: 'Work', href: '#work' }, { label: 'Stack', href: '#stack' }, { label: 'About', href: '#about' }, { label: 'Contact', href: '#contact' }]
-    : [{ label: 'Projetos', href: '#work' }, { label: 'Stack', href: '#stack' }, { label: 'Sobre', href: '#about' }, { label: 'Contato', href: '#contact' }]
+  const links = [
+    { label: t.nav.work, href: '#work' },
+    { label: t.nav.stack, href: '#stack' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.contact, href: '#contact' },
+  ]
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} role="navigation">

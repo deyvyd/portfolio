@@ -1,4 +1,5 @@
 import { projects } from '../data'
+import { useTranslation } from '../i18n'
 import { ProjectCard } from './ProjectCard'
 import { useInView } from '../hooks/useInView'
 import './Section.css'
@@ -9,25 +10,22 @@ interface WorkProps {
 
 export function Work({ lang }: WorkProps) {
   const { ref, inView } = useInView(0.1)
-
-  const copy = lang === 'en'
-    ? { eyebrow: 'Selected work', title: 'Projects that\nshipped and stuck.', sub: 'Three production apps. Real users. Measured outcomes.' }
-    : { eyebrow: 'Trabalhos selecionados', title: 'Projetos que\nfuncionam em produção.', sub: 'Três apps em produção. Usuários reais. Resultados medidos.' }
+  const t = useTranslation(lang)
 
   return (
     <section
       id="work"
       className={`section ${inView ? 'section--visible' : ''}`}
       ref={ref as React.RefObject<HTMLElement>}
-      aria-label={copy.eyebrow}
+      aria-label={t.work.eyebrow}
     >
       <div className="section__inner">
         <div className="section__header">
-          <span className="section__eyebrow">{copy.eyebrow}</span>
+          <span className="section__eyebrow">{t.work.eyebrow}</span>
           <h2 className="section__title">
-            {copy.title.split('\n').map((line, i) => <span key={i}>{line}</span>)}
+            {t.work.title.split('\n').map((line, i) => <span key={i}>{line}</span>)}
           </h2>
-          <p className="section__sub">{copy.sub}</p>
+          <p className="section__sub">{t.work.sub}</p>
         </div>
 
         <div className="work__grid">

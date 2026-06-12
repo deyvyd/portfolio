@@ -140,6 +140,9 @@
 }
 
 .project-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--muted);
@@ -149,6 +152,21 @@
   border-radius: 4px;
   letter-spacing: 0.04em;
   transition: color var(--transition), border-color var(--transition);
+}
+
+.project-card__tag-icon {
+  display: flex;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.project-card__tag-icon svg {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
 }
 .project-card:hover .project-card__tag {
   border-color: rgba(91, 139, 245, 0.25);

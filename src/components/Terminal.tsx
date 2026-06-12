@@ -1,27 +1,43 @@
 import { useEffect, useRef, useState } from 'react'
-import { terminalLines } from '../data'
+import { useTranslation } from '../i18n'
 import './Terminal.css'
 
-export function Terminal() {
+const DELAYS = [0, 600, 1200, 1800, 2400, 3000, 3600]
+
+interface TerminalProps {
+  lang: 'en' | 'pt'
+}
+
+export function Terminal({ lang }: TerminalProps) {
   const [visibleLines, setVisibleLines] = useState<number[]>([])
   const [done, setDone] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
+  const t = useTranslation(lang)
+  const lines = t.terminalLines
 
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = []
 
-    terminalLines.forEach((line, i) => {
-      const t = setTimeout(() => {
-        setVisibleLines(prev => [...prev, i])
-        if (i === terminalLines.length - 1) {
-          setTimeout(() => setDone(true), 400)
-        }
-      }, line.delay)
-      timers.push(t)
-    })
+    const reset = setTimeout(() => {
+      setVisibleLines([])
+      setDone(false)
 
-    return () => timers.forEach(clearTimeout)
-  }, [])
+      lines.forEach((_, i) => {
+        const timer = setTimeout(() => {
+          setVisibleLines(prev => [...prev, i])
+          if (i === lines.length - 1) {
+            setTimeout(() => setDone(true), 400)
+          }
+        }, DELAYS[i] ?? i * 600)
+        timers.push(timer)
+      })
+    }, 0)
+
+    return () => {
+      clearTimeout(reset)
+      timers.forEach(clearTimeout)
+    }
+  }, [lines])
 
   return (
     <div ref={containerRef} className="terminal" role="region" aria-label="Terminal introduction">
@@ -32,13 +48,13 @@ export function Terminal() {
         <span className="terminal__title">deyvyd ~ portfolio</span>
       </div>
       <div className="terminal__body">
-        {terminalLines.map((line, i) => (
+        {lines.map((line, i) => (
           <div
             key={i}
             className={`terminal__line ${visibleLines.includes(i) ? 'terminal__line--visible' : ''} ${line.highlight ? 'terminal__line--highlight' : ''}`}
           >
             <span className="terminal__prompt">$</span>
-            <TypeWriter text={line.text} active={visibleLines.includes(i)} />
+            <TypeWriter key={`${lang}-${i}`} text={line.text} active={visibleLines.includes(i)} />
           </div>
         ))}
         {done && <span className="terminal__cursor" aria-hidden="true">▊</span>}
@@ -54,7 +70,6 @@ function TypeWriter({ text, active }: { text: string; active: boolean }) {
   useEffect(() => {
     if (!active) return
     indexRef.current = 0
-    setDisplayed('')
 
     const interval = setInterval(() => {
       if (indexRef.current < text.length) {
