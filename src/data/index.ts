@@ -21,7 +21,7 @@ export const projects = [
     tags: ['Python', 'Flask', 'Vue.js', 'Tailwind CSS', 'Docker', 'Automation'],
     metric: { value: '89%' },
     accent: '#5B8BF5',
-    live: null,
+    live: 'https://docgen.ferramentas.deyvyd.com',
     repo: null,
   },
   {
@@ -30,7 +30,8 @@ export const projects = [
     tags: ['React 19', 'TypeScript', 'Supabase', 'Zustand', 'Tailwind 4', 'Framer Motion', 'Zod', 'Sentry', 'Playwright', 'GitHub Actions'],
     metric: { value: '14' },
     accent: '#34D399',
-    live: 'https://financeiro.deyvyd.com',
+    live: 'https://finance.deyvyd.com',
+    livePt: 'https://financeiro.deyvyd.com',
     repo: null,
   },
   {
@@ -39,7 +40,8 @@ export const projects = [
     tags: ['React 19', 'PWA', 'Supabase', 'Barcode API'],
     metric: { value: '4' },
     accent: '#F59E0B',
-    live: 'https://mercado.deyvyd.com',
+    live: 'https://market.deyvyd.com',
+    livePt: 'https://mercado.deyvyd.com',
     repo: null,
   },
 ]

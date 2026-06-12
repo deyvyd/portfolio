@@ -10,6 +10,7 @@ interface Project {
   metric: { value: string }
   accent: string
   live: string | null
+  livePt?: string
   repo: string | null
 }
 
@@ -23,6 +24,7 @@ export function ProjectCard({ project, lang, index }: ProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   const t = useTranslation(lang)
   const p = t.projects[project.id]
+  const liveUrl = (lang === 'pt' && project.livePt) ? project.livePt : project.live
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = cardRef.current
@@ -98,8 +100,8 @@ export function ProjectCard({ project, lang, index }: ProjectCardProps) {
           })}
         </div>
         <div className="project-card__links">
-          {project.live && (
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-card__link">
+          {liveUrl && (
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-card__link">
               {t.projectCard.viewLive} ↗
             </a>
           )}
