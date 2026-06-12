@@ -9,6 +9,7 @@ interface Project {
   tags: string[]
   metric: { value: string }
   accent: string
+  logo?: string
   live: string | null
   livePt?: string
   repo: string | null
@@ -63,7 +64,12 @@ export function ProjectCard({ project, lang, index }: ProjectCardProps) {
             <span className="project-card__metric-label">{p.metricLabel}</span>
           </div>
         </div>
-        <h3 className="project-card__title">{project.title}</h3>
+        <div className="project-card__title-row">
+          {project.logo && (
+            <img src={project.logo} alt="" aria-hidden="true" className="project-card__logo" />
+          )}
+          <h3 className="project-card__title">{project.title}</h3>
+        </div>
       </div>
 
       <div className="project-card__body">

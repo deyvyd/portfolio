@@ -20,6 +20,7 @@ export const projects: Array<{
   tags: string[]
   metric: { value: string }
   accent: string
+  logo?: string
   live: string | null
   livePt?: string
   repo: string | null
@@ -27,6 +28,7 @@ export const projects: Array<{
   {
     id: 'docgen',
     title: 'DocGen',
+    logo: '/logo-docgen.svg',
     tags: ['Python', 'Flask', 'Vue.js', 'Tailwind CSS', 'Docker', 'Automation'],
     metric: { value: '89%' },
     accent: '#5B8BF5',
@@ -36,6 +38,7 @@ export const projects: Array<{
   {
     id: 'moneytalks',
     title: 'MoneyTalks',
+    logo: '/logo-moneytalks.svg',
     tags: ['React 19', 'TypeScript', 'Supabase', 'Zustand', 'Tailwind 4', 'Framer Motion', 'Zod', 'Sentry', 'Playwright', 'GitHub Actions'],
     metric: { value: '14' },
     accent: '#34D399',
@@ -46,6 +49,7 @@ export const projects: Array<{
   {
     id: 'homestock',
     title: 'HomeStock',
+    logo: '/logo-homestock.svg',
     tags: ['React 19', 'PWA', 'Supabase', 'Barcode API'],
     metric: { value: '4' },
     accent: '#F59E0B',
