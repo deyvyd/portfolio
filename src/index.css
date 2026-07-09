@@ -9,6 +9,7 @@
   --accent-dim: #1E2A4A;
   --accent-glow: rgba(91, 139, 245, 0.15);
   --text:       #E8E8F0;
+  --text-secondary: #9494B0;
   --muted:      #6B6B85;
   --success:    #34D399;
 
@@ -38,6 +39,9 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body.cursor-ready {
   cursor: none;
 }
 
@@ -52,10 +56,13 @@ a {
 }
 
 button {
-  cursor: none;
   border: none;
   background: none;
   font-family: inherit;
+}
+
+.cursor-ready button {
+  cursor: none;
 }
 
 img {

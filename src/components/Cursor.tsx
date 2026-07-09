@@ -46,6 +46,7 @@ export function Cursor() {
     window.addEventListener('mousemove', onMove)
     rafId = requestAnimationFrame(animate)
     bindLinks()
+    document.body.classList.add('cursor-ready')
 
     const observer = new MutationObserver(bindLinks)
     observer.observe(document.body, { childList: true, subtree: true })
@@ -54,6 +55,7 @@ export function Cursor() {
       window.removeEventListener('mousemove', onMove)
       cancelAnimationFrame(rafId)
       observer.disconnect()
+      document.body.classList.remove('cursor-ready')
     }
   }, [])
 

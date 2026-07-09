@@ -104,7 +104,7 @@
 
 .about__exp-summary {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-top: 4px;
 }

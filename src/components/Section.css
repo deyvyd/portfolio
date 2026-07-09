@@ -54,7 +54,7 @@
 
 .section__sub {
   font-size: 15px;
-  color: var(--muted);
+  color: var(--text-secondary);
   margin-top: 16px;
   max-width: 480px;
   line-height: 1.65;
