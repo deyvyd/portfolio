@@ -23,7 +23,7 @@ export const en: Translation = {
     moneytalks: {
       eyebrow: 'Personal Finance App · Live in Production',
       problem: 'Managing finances in Google Sheets hit its ceiling — no real-time sync, no automation, no room to grow. Needed full ownership of the data and the product.',
-      solution: 'Migrated from Firebase — redesigned 45-table PostgreSQL schema with RLS, Google OAuth, and Realtime. OFX/CSV/PDF import, real-time dashboards, Sentry error tracking, CI/CD via GitHub Actions with Playwright E2E blocking deploys on failure.',
+      solution: 'Migrated from Firebase — redesigned 45-table PostgreSQL schema with RLS, Google OAuth, and Realtime. OFX/CSV/PDF import with OCR-based parsing, real-time dashboards, Sentry error tracking, CI/CD via GitHub Actions with Playwright E2E blocking deploys on failure.',
       result: 'Replaced Google Sheets entirely. Covers daily transactions, credit cards, salary slips, vacation/13th/meal-voucher tracking, and household employee management. 299 unit tests + Playwright E2E blocking deploys in prod.',
       metricLabel: 'table schema',
     },
@@ -58,14 +58,11 @@ export const en: Translation = {
     },
   ],
   stackCategories: {
-    Frontend: 'Frontend',
-    Language: 'Language',
-    Backend: 'Backend',
-    Database: 'Database',
-    State: 'State',
-    Tooling: 'Tooling',
-    DevOps: 'DevOps',
-    Testing: 'Testing',
+    'Languages': 'Languages',
+    'Frontend': 'Frontend',
+    'Backend & Data': 'Backend & Data',
+    'Tooling & Quality': 'Tooling & Quality',
+    'AI & Agentic Engineering': 'AI & Agentic Engineering',
   },
   terminalLines: [
     { text: '> initializing deyvyd.portfolio' },
@@ -100,7 +97,7 @@ export const en: Translation = {
   about: {
     eyebrow: 'About',
     title: 'Engineer who thinks\nlike a strategist.',
-    bio1: "Full-Stack Software Engineer and Applied AI Specialist with 5+ years of experience, based in Natal, Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
+    bio1: "Full-Stack Software Engineer and Applied AI Specialist with 4+ years of experience, based in Natal, Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
     bio2: "B.Eng. in Computer Engineering from UFRN (2014), Master's in Parallel Computing (2016). Sharpened soft skills through coaching, leadership, and communication training. Gained business vision co-founding a digital marketing agency managing real acquisition funnels. That hybrid background — deep technical, business acumen, and human skills — is what makes the difference: I don't just implement requirements, I interrogate them.",
     bio3: "Building software since before it was a career plan — first website in 2002 with Notepad and a Netscape editor at school, first program in 2005 in Pascal. That's when I knew. Now targeting remote engineering roles at the intersection of product thinking, full-stack development, and applied AI.",
     expLabel: 'Experience',

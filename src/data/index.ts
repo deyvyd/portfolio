@@ -60,29 +60,46 @@ export const projects: Array<{
 ]
 
 export const stack = [
+  // Languages
+  { name: 'TypeScript', category: 'Languages' },
+  { name: 'Python', category: 'Languages' },
+  { name: 'Java', category: 'Languages' },
+
+  // Frontend
   { name: 'React', category: 'Frontend' },
-  { name: 'TypeScript', category: 'Language' },
-  { name: 'Python', category: 'Language' },
-  { name: 'Java', category: 'Language' },
-  { name: 'Node.js', category: 'Backend' },
-  { name: 'Express', category: 'Backend' },
-  { name: 'Flask', category: 'Backend' },
-  { name: 'Supabase', category: 'Database' },
-  { name: 'PostgreSQL', category: 'Database' },
   { name: 'Vue.js', category: 'Frontend' },
   { name: 'Tailwind CSS', category: 'Frontend' },
   { name: 'Framer Motion', category: 'Frontend' },
-  { name: 'Zustand', category: 'State' },
-  { name: 'Zod', category: 'Tooling' },
   { name: 'react-hook-form', category: 'Frontend' },
-  { name: 'Vite', category: 'Tooling' },
-  { name: 'Docker', category: 'DevOps' },
-  { name: 'GitHub Actions', category: 'DevOps' },
-  { name: 'Sentry', category: 'DevOps' },
-  { name: 'Vitest', category: 'Testing' },
-  { name: 'Playwright', category: 'Testing' },
-  { name: 'REST APIs', category: 'Backend' },
-  { name: 'date-fns', category: 'Tooling' },
+  { name: 'Zustand', category: 'Frontend' },
+
+  // Backend & Data
+  { name: 'Node.js', category: 'Backend & Data' },
+  { name: 'Express', category: 'Backend & Data' },
+  { name: 'Flask', category: 'Backend & Data' },
+  { name: 'REST APIs', category: 'Backend & Data' },
+  { name: 'Supabase', category: 'Backend & Data' },
+  { name: 'PostgreSQL', category: 'Backend & Data' },
+  { name: 'Edge Functions', category: 'Backend & Data' },
+  { name: 'Row-Level Security (RLS)', category: 'Backend & Data' },
+  { name: 'OCR', category: 'Backend & Data' },
+
+  // Tooling & Quality
+  { name: 'Zod', category: 'Tooling & Quality' },
+  { name: 'Vite', category: 'Tooling & Quality' },
+  { name: 'date-fns', category: 'Tooling & Quality' },
+  { name: 'Docker', category: 'Tooling & Quality' },
+  { name: 'GitHub Actions', category: 'Tooling & Quality' },
+  { name: 'Sentry', category: 'Tooling & Quality' },
+  { name: 'Vitest', category: 'Tooling & Quality' },
+  { name: 'Playwright', category: 'Tooling & Quality' },
+  { name: 'BDD', category: 'Tooling & Quality' },
+
+  // AI & Agentic Engineering
+  { name: 'Claude Code Subagents', category: 'AI & Agentic Engineering' },
+  { name: 'Prompt Engineering', category: 'AI & Agentic Engineering' },
+  { name: 'LLM Integration', category: 'AI & Agentic Engineering' },
+  { name: 'AI-Agentic Engineering', category: 'AI & Agentic Engineering' },
 ]
 
 export const experience = [

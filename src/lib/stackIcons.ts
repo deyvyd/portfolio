@@ -18,6 +18,7 @@ import {
   siGithubactions,
   siSentry,
   siVitest,
+  siClaudecode,
 } from 'simple-icons'
 
 export const STACK_ICONS: Record<string, { svg: string; hex: string }> = {
@@ -43,15 +44,13 @@ export const STACK_ICONS: Record<string, { svg: string; hex: string }> = {
   'GitHub Actions': siGithubactions,
   'Sentry': siSentry,
   'Vitest': siVitest,
+  'Claude Code Subagents': siClaudecode,
 }
 
 export const CATEGORY_COLORS: Record<string, string> = {
-  Frontend:  '#38BDF8',
-  Language:  '#34D399',
-  Backend:   '#FB923C',
-  Database:  '#818CF8',
-  State:     '#F472B6',
-  Tooling:   '#FACC15',
-  DevOps:    '#F87171',
-  Testing:   '#A78BFA',
+  'Languages':                '#34D399',
+  'Frontend':                 '#38BDF8',
+  'Backend & Data':           '#FB923C',
+  'Tooling & Quality':        '#FACC15',
+  'AI & Agentic Engineering': '#C084FC',
 }

@@ -9,7 +9,7 @@ interface StackProps {
   lang: 'en' | 'pt'
 }
 
-const CATEGORY_ORDER = ['Frontend', 'Language', 'Backend', 'Database', 'State', 'Tooling', 'DevOps', 'Testing']
+const CATEGORY_ORDER = ['Languages', 'Frontend', 'Backend & Data', 'Tooling & Quality', 'AI & Agentic Engineering']
 
 export function Stack({ lang }: StackProps) {
   const { ref, inView } = useInView(0.15)
