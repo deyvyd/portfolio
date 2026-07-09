@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { meta } from '../data'
 import { useTranslation } from '../i18n'
 import { useInView } from '../hooks/useInView'
@@ -11,6 +12,24 @@ interface ContactProps {
 export function Contact({ lang }: ContactProps) {
   const { ref, inView } = useInView(0.15)
   const t = useTranslation(lang)
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(meta.email)
+    } catch {
+      const input = document.createElement('textarea')
+      input.value = meta.email
+      input.style.position = 'fixed'
+      input.style.opacity = '0'
+      document.body.appendChild(input)
+      input.select()
+      document.execCommand('copy')
+      document.body.removeChild(input)
+    }
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <section
@@ -29,11 +48,40 @@ export function Contact({ lang }: ContactProps) {
           </div>
 
           <div className="contact__right">
-            <a href={`mailto:${meta.email}`} className="contact__email-btn">
-              <span className="contact__email-label">{t.contact.cta}</span>
-              <span className="contact__email-addr">{meta.email}</span>
+            <div className="contact__email-card">
+              <a
+                href={`mailto:${meta.email}`}
+                className="contact__email-btn"
+                aria-label={`${t.contact.cta}: ${meta.email}`}
+              />
+
+              <div className="contact__email-visual">
+                <span className="contact__email-label">{t.contact.cta}</span>
+                <span className="contact__email-row">
+                  <span className="contact__email-addr">{meta.email}</span>
+                  <button
+                    type="button"
+                    className={`contact__copy-icon ${copied ? 'contact__copy-icon--copied' : ''}`}
+                    onClick={handleCopy}
+                    aria-label={copied ? t.contact.copied : t.contact.copy}
+                    title={copied ? t.contact.copied : t.contact.copy}
+                  >
+                    {copied ? (
+                      <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4 10.5l4 4L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ) : (
+                      <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <rect x="7" y="7" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.6" />
+                        <path d="M4.5 12.5H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.5a1 1 0 0 1 1 1v.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                      </svg>
+                    )}
+                  </button>
+                </span>
+              </div>
+
               <span className="contact__arrow" aria-hidden="true">↗</span>
-            </a>
+            </div>
 
             <div className="contact__social">
               <span className="contact__or">{t.contact.or}</span>

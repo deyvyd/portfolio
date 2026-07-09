@@ -23,7 +23,7 @@ export const en: Translation = {
     moneytalks: {
       eyebrow: 'Personal Finance App · Live in Production',
       problem: 'Managing finances in Google Sheets hit its ceiling — no real-time sync, no automation, no room to grow. Needed full ownership of the data and the product.',
-      solution: 'Migrated from Firebase — redesigned 14-table PostgreSQL schema with RLS, Google OAuth, and Realtime. OFX/CSV/PDF import, real-time dashboards, Sentry error tracking, CI/CD via GitHub Actions with Playwright E2E blocking deploys on failure.',
+      solution: 'Migrated from Firebase — redesigned 45-table PostgreSQL schema with RLS, Google OAuth, and Realtime. OFX/CSV/PDF import, real-time dashboards, Sentry error tracking, CI/CD via GitHub Actions with Playwright E2E blocking deploys on failure.',
       result: 'Replaced Google Sheets entirely. Covers daily transactions, credit cards, salary slips, vacation/13th/meal-voucher tracking, and household employee management. 299 unit tests + Playwright E2E blocking deploys in prod.',
       metricLabel: 'table schema',
     },
@@ -111,6 +111,8 @@ export const en: Translation = {
     sub: "I'm open to remote full-stack, implementation engineering, and AI-adjacent roles. If you're working on something interesting, let's talk.",
     cta: 'Send an email',
     or: 'or find me on',
+    copy: 'Copy email',
+    copied: 'Copied!',
   },
   footer: {
     built: 'Built with React 19 + TypeScript + Vite',

@@ -23,7 +23,7 @@ export const pt: Translation = {
     moneytalks: {
       eyebrow: 'App de Finanças Pessoais · Em Produção',
       problem: 'Gerenciar finanças no Google Sheets chegou ao limite — sem sync em tempo real, sem automação, sem espaço para crescer. Precisava de controle total sobre os dados e o produto.',
-      solution: 'Migrado do Firebase — schema PostgreSQL de 14 tabelas redesenhado com RLS, Google OAuth e Realtime. Importação OFX/CSV/PDF, dashboards em tempo real, rastreamento de erros com Sentry, CI/CD via GitHub Actions com E2E Playwright bloqueando deploys em caso de falha.',
+      solution: 'Migrado do Firebase — schema PostgreSQL de 45 tabelas redesenhado com RLS, Google OAuth e Realtime. Importação OFX/CSV/PDF, dashboards em tempo real, rastreamento de erros com Sentry, CI/CD via GitHub Actions com E2E Playwright bloqueando deploys em caso de falha.',
       result: 'Substituiu o Google Sheets por completo. Cobre transações do dia a dia, cartões de crédito, holerites, controle de férias/13º/VA e gestão de funcionárias. 299 testes unitários + pipeline E2E bloqueando deploys em prod.',
       metricLabel: 'tabelas no schema',
     },
@@ -111,6 +111,8 @@ export const pt: Translation = {
     sub: 'Estou aberto a vagas remotas de engenharia full-stack, implementation engineering e funções de IA. Se você está trabalhando em algo interessante, vamos conversar.',
     cta: 'Enviar email',
     or: 'ou me encontre no',
+    copy: 'Copiar email',
+    copied: 'Copiado!',
   },
   footer: {
     built: 'Construído com React 19 + TypeScript + Vite',

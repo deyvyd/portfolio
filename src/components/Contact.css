@@ -19,20 +19,17 @@
   gap: 28px;
 }
 
-.contact__email-btn {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 28px 32px;
+.contact__email-card {
+  position: relative;
+  padding: 28px 56px 28px 32px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  position: relative;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   overflow: hidden;
 }
 
-.contact__email-btn::before {
+.contact__email-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -41,14 +38,33 @@
   transition: opacity var(--transition);
 }
 
-.contact__email-btn:hover {
+.contact__email-card:has(.contact__email-btn:hover) {
   border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 16px 40px rgba(91, 139, 245, 0.15);
 }
 
-.contact__email-btn:hover::before {
+.contact__email-card:has(.contact__email-btn:hover)::before {
   opacity: 1;
+}
+
+.contact__email-card:has(.contact__email-btn:hover) .contact__arrow {
+  transform: translate(2px, -2px);
+}
+
+.contact__email-btn {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact__email-visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
 }
 
 .contact__email-label {
@@ -57,7 +73,12 @@
   color: var(--accent);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  position: relative;
+}
+
+.contact__email-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact__email-addr {
@@ -65,20 +86,44 @@
   font-size: 18px;
   font-weight: 600;
   color: var(--text);
-  position: relative;
 }
 
 .contact__arrow {
   position: absolute;
   top: 24px;
   right: 24px;
+  z-index: 1;
   font-size: 20px;
   color: var(--accent);
   transition: transform var(--transition);
+  pointer-events: none;
 }
 
-.contact__email-btn:hover .contact__arrow {
-  transform: translate(2px, -2px);
+.contact__copy-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  pointer-events: auto;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.contact__copy-icon:hover,
+.contact__copy-icon:focus-visible {
+  color: var(--accent);
+  border-color: var(--border);
+  background: var(--surface2);
+}
+
+.contact__copy-icon--copied {
+  color: var(--success);
 }
 
 .contact__social {

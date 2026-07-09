@@ -61,6 +61,8 @@ export interface Translation {
     sub: string
     cta: string
     or: string
+    copy: string
+    copied: string
   }
   footer: {
     built: string

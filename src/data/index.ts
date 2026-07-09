@@ -10,7 +10,7 @@ export const meta = {
 export const stats = [
   { value: 89, suffix: '%' },
   { value: 40, suffix: 'h' },
-  { value: 14, suffix: '' },
+  { value: 45, suffix: '' },
   { value: 3, suffix: '' },
 ]
 
@@ -40,7 +40,7 @@ export const projects: Array<{
     title: 'MoneyTalks',
     logo: '/logo-moneytalks.svg',
     tags: ['React 19', 'TypeScript', 'Supabase', 'Zustand', 'Tailwind 4', 'Framer Motion', 'Zod', 'Sentry', 'Playwright', 'GitHub Actions'],
-    metric: { value: '14' },
+    metric: { value: '45' },
     accent: '#34D399',
     live: 'https://finance.deyvyd.com',
     livePt: 'https://financeiro.deyvyd.com',
