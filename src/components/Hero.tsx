@@ -36,6 +36,8 @@ export function Hero({ lang }: HeroProps) {
             <span>{meta.location} · {t.meta.availability}</span>
           </div>
 
+          <span className="hero__name">{meta.name}</span>
+
           <h1 className="hero__headline">
             <span className="hero__headline-role">{t.hero.rolePrefix}</span>
             <span className="hero__headline-main">

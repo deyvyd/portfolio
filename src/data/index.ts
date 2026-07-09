@@ -1,5 +1,5 @@
 export const meta = {
-  name: 'Deyvyd',
+  name: 'Deyvyd Moura',
   location: 'Natal, BR',
   email: 'deyvyd.dev@gmail.com',
   github: 'https://github.com/deyvyd',
