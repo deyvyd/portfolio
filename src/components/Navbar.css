@@ -39,7 +39,7 @@
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--text-secondary);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: color var(--transition);
@@ -57,6 +57,13 @@
 }
 .navbar__link:hover { color: var(--text); }
 .navbar__link:hover::after { width: 100%; }
+
+.navbar__link--active {
+  color: var(--accent);
+}
+.navbar__link--active::after {
+  width: 100%;
+}
 
 .navbar__actions {
   display: flex;
