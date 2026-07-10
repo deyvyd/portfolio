@@ -16,9 +16,8 @@ export function Hero({ lang }: HeroProps) {
   const t = useTranslation(lang)
 
   useEffect(() => {
-    const timer = setTimeout(() => setCountersActive(true), 4000)
-    return () => clearTimeout(timer)
-  }, [])
+    if (inView) setCountersActive(true)
+  }, [inView])
 
   return (
     <section
