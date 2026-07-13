@@ -1,0 +1,21 @@
+{
+  "name": "Deyvyd Moura · Full-Stack Engineer & Applied AI Specialist",
+  "short_name": "Deyvyd",
+  "description": "Full-Stack Software Engineer & Applied AI Specialist based in Natal, Brazil.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0C10",
+  "theme_color": "#0C0C10",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
