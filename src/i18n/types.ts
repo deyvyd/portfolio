@@ -20,6 +20,7 @@ export interface Translation {
   stats: string[]
   projects: {
     docgen: ProjectTranslation
+    conflow: ProjectTranslation
     moneytalks: ProjectTranslation
     homestock: ProjectTranslation
   }
@@ -54,6 +55,7 @@ export interface Translation {
     bio2: string
     bio3: string
     expLabel: string
+    certLabel: string
   }
   contact: {
     eyebrow: string

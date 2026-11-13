@@ -19,6 +19,14 @@ import {
   siSentry,
   siVitest,
   siClaudecode,
+  siFastapi,
+  siModelcontextprotocol,
+  siRedmine,
+  siClickup,
+  siGitlab,
+  siJira,
+  siGit,
+  siJavascript,
 } from 'simple-icons'
 
 export const STACK_ICONS: Record<string, { svg: string; hex: string }> = {
@@ -45,6 +53,16 @@ export const STACK_ICONS: Record<string, { svg: string; hex: string }> = {
   'Sentry': siSentry,
   'Vitest': siVitest,
   'Claude Code Subagents': siClaudecode,
+  'Claude Code': siClaudecode,
+  'FastAPI': siFastapi,
+  'MCP': siModelcontextprotocol,
+  'MCP (Model Context Protocol)': siModelcontextprotocol,
+  'Redmine': siRedmine,
+  'ClickUp': siClickup,
+  'GitLab': siGitlab,
+  'Jira': siJira,
+  'Git': siGit,
+  'JavaScript': siJavascript,
 }
 
 export const CATEGORY_COLORS: Record<string, string> = {

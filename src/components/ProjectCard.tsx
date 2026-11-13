@@ -4,7 +4,7 @@ import { STACK_ICONS } from '../lib/stackIcons'
 import './ProjectCard.css'
 
 interface Project {
-  id: 'docgen' | 'moneytalks' | 'homestock'
+  id: 'docgen' | 'conflow' | 'moneytalks' | 'homestock'
   title: string
   tags: string[]
   metric: { value: string }

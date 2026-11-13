@@ -4,7 +4,7 @@ export const en: Translation = {
   meta: {
     role: "Software Engineer | Applied AI Engineer",
     tagline: "who ships products\nthat move numbers.",
-    availability: "Available for remote",
+    availability: "Available for remote and relocation",
   },
   stats: [
     "reduction in doc generation time",
@@ -22,6 +22,16 @@ export const en: Translation = {
       result:
         "89% reduction in generation time, ~40h/month saved, direct revenue increase in a function-point billing model. Approved for open-source release.",
       metricLabel: "faster",
+    },
+    conflow: {
+      eyebrow: "Internal Platform · Aiyra Engenharia de Dados",
+      problem:
+        "Work items, commits and merge requests lived in three separate tools (Redmine, ClickUp and GitLab), and the first ClickUp load alone took 14 minutes.",
+      solution:
+        "Designed and built a platform (Python/FastAPI, React, PostgreSQL) that unifies the three tools, links tasks, commits and merge requests across them, and exposes the data to AI agents via MCP. On top of it, three Claude Code skills (Redmine, ClickUp, GitLab) query and update work items, log hours and check deploys, with approval and verification on every change.",
+      result:
+        "First ClickUp load cut from 14 to 5 minutes. Used daily by the team.",
+      metricLabel: "min first load",
     },
     moneytalks: {
       eyebrow: "Personal Finance App · Live in Production",
@@ -48,7 +58,7 @@ export const en: Translation = {
     {
       role: "Software Engineer",
       summary:
-        "Led technical execution and backlog prioritization for the dev team. As a self-driven initiative, architected and built a full-stack documentation engine (Vue.js, Python/Flask, Docker) serving clients in the Axia Group (formerly Eletrobras) — 89% reduction in generation time, ~40h/month saved, direct revenue impact. Currently serving CAERN. Coordinated 20–30 monthly demands across Jira and ClickUp.",
+        "Led technical execution and backlog prioritization for the dev team, coordinating 20–30 monthly demands and setting up QA processes that improved production stability and cut post-release rework. As a self-driven initiative, architected and built a full-stack documentation engine (Vue.js, Python/Flask, Docker) serving clients in the Axia Group (formerly Eletrobras) — 89% reduction in generation time, ~40h/month saved, direct revenue impact. Built Conflow, which unifies Redmine, ClickUp and GitLab via MCP, plus three Claude Code skills on top of it. Currently serving CAERN.",
     },
     {
       role: "Software Engineer",
@@ -56,7 +66,7 @@ export const en: Translation = {
         "Designed workflow automation and custom UI layers within the Amadeus GDS ecosystem to optimize airline service operations. Built UI flows translating user actions into automated command-line operations, reducing manual entry errors in high-volume environments.",
     },
     {
-      role: "Co-founder & Digital Strategist",
+      role: "Digital Marketing Specialist",
       summary:
         "Founded and managed a digital agency for high-stakes product launches. Executed 4+ major launches with measurable ROI, optimized conversion funnels through A/B testing, and deployed high-traffic landing pages with 99.9% uptime during peak traffic.",
     },
@@ -84,7 +94,7 @@ export const en: Translation = {
     { text: "> 3 live apps found" },
     { text: "> 89% efficiency gain detected" },
     { text: "> stack: React · TypeScript · Python · Supabase" },
-    { text: "> status: open to remote opportunities" },
+    { text: "> status: open to remote and relocation" },
     { text: "> ready.", highlight: true },
   ],
   nav: {
@@ -102,7 +112,7 @@ export const en: Translation = {
   work: {
     eyebrow: "Selected work",
     title: "Projects that\nshipped and stuck.",
-    sub: "Three production apps. Real users. Measured outcomes.",
+    sub: "Four projects in production. Real users. Measured outcomes.",
   },
   stackSection: {
     eyebrow: "Tech stack",
@@ -111,15 +121,16 @@ export const en: Translation = {
   about: {
     eyebrow: "About",
     title: "Engineer who thinks\nlike a strategist.",
-    bio1: "Full-Stack Software Engineer and Applied AI Specialist with ~5 years of experience, based in Natal, Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
-    bio2: "B.Eng. in Computer Engineering from UFRN (2014), Master's in Parallel Computing (2016). Sharpened soft skills through coaching, leadership, and communication training. Gained business vision co-founding a digital marketing agency managing real acquisition funnels. That hybrid background — deep technical, business acumen, and human skills — is what makes the difference: I don't just implement requirements, I interrogate them.",
-    bio3: "Building software since before it was a career plan — first website in 2002 with Notepad and a Netscape editor at school, first program in 2005 in Pascal. That's when I knew. Now targeting remote engineering roles at the intersection of product thinking, full-stack development, and applied AI.",
+    bio1: "Full-Stack Software Engineer and Applied AI Specialist with ~5 years of experience, based in São Paulo, Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
+    bio2: "B.Eng. in Computer Engineering from UFRN (2014), Master's in Parallel Computing (ABD, all but the dissertation, 2016). Sharpened soft skills through coaching, leadership, and communication training. Gained business vision co-founding a digital marketing agency managing real acquisition funnels. That hybrid background — deep technical, business acumen, and human skills — is what makes the difference: I don't just implement requirements, I interrogate them.",
+    bio3: "Building software since before it was a career plan — first website in 2002 with Notepad and a Netscape editor at school, first program in 2005 in Pascal. That's when I knew. Now targeting remote engineering roles, open to relocation, at the intersection of product thinking, full-stack development, and applied AI.",
     expLabel: "Experience",
+    certLabel: "Certifications",
   },
   contact: {
     eyebrow: "Contact",
     title: "Let's build\nsomething real.",
-    sub: "I'm open to remote full-stack, implementation engineering, and AI-adjacent roles. If you're working on something interesting, let's talk.",
+    sub: "I'm open to remote and relocation opportunities in full-stack, implementation engineering, and AI-adjacent roles. If you're working on something interesting, let's talk.",
     cta: "Send an email",
     or: "or find me on",
     copy: "Copy email",

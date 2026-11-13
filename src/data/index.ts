@@ -1,6 +1,6 @@
 export const meta = {
   name: 'Deyvyd Moura',
-  location: 'Natal, BR',
+  location: 'São Paulo, BR',
   email: 'deyvyd.dev@gmail.com',
   github: 'https://github.com/deyvyd',
   linkedin: 'https://linkedin.com/in/deyvyd',
@@ -15,7 +15,7 @@ export const stats = [
 ]
 
 export const projects: Array<{
-  id: 'docgen' | 'moneytalks' | 'homestock'
+  id: 'docgen' | 'conflow' | 'moneytalks' | 'homestock'
   title: string
   tags: string[]
   metric: { value: string }
@@ -36,13 +36,22 @@ export const projects: Array<{
     repo: null,
   },
   {
+    id: 'conflow',
+    title: 'Conflow',
+    tags: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'MCP', 'Claude Code'],
+    metric: { value: '14→5' },
+    accent: '#C084FC',
+    live: null,
+    repo: null,
+  },
+  {
     id: 'moneytalks',
     title: 'MoneyTalks',
     logo: '/logo-moneytalks.svg',
     tags: ['React 19', 'TypeScript', 'Supabase', 'Zustand', 'Tailwind 4', 'Framer Motion', 'Zod', 'Sentry', 'Playwright', 'GitHub Actions'],
     metric: { value: '45' },
     accent: '#34D399',
-    live: 'https://finance.deyvyd.com',
+    live: 'https://moneytalks.deyvyd.com',
     livePt: 'https://financeiro.deyvyd.com',
     repo: null,
   },
@@ -63,6 +72,7 @@ export const stack = [
   // Languages
   { name: 'TypeScript', category: 'Languages' },
   { name: 'Python', category: 'Languages' },
+  { name: 'JavaScript', category: 'Languages' },
   { name: 'Java', category: 'Languages' },
 
   // Frontend
@@ -76,6 +86,7 @@ export const stack = [
   // Backend & Data
   { name: 'Node.js', category: 'Backend & Data' },
   { name: 'Express', category: 'Backend & Data' },
+  { name: 'FastAPI', category: 'Backend & Data' },
   { name: 'Flask', category: 'Backend & Data' },
   { name: 'REST APIs', category: 'Backend & Data' },
   { name: 'Supabase', category: 'Backend & Data' },
@@ -89,14 +100,24 @@ export const stack = [
   { name: 'Vite', category: 'Tooling & Quality' },
   { name: 'date-fns', category: 'Tooling & Quality' },
   { name: 'Docker', category: 'Tooling & Quality' },
+  { name: 'Git', category: 'Tooling & Quality' },
   { name: 'GitHub Actions', category: 'Tooling & Quality' },
+  { name: 'GitLab', category: 'Tooling & Quality' },
+  { name: 'AWS', category: 'Tooling & Quality' },
   { name: 'Sentry', category: 'Tooling & Quality' },
   { name: 'Vitest', category: 'Tooling & Quality' },
   { name: 'Playwright', category: 'Tooling & Quality' },
   { name: 'BDD', category: 'Tooling & Quality' },
+  { name: 'Manual QA', category: 'Tooling & Quality' },
+  { name: 'Jira', category: 'Tooling & Quality' },
+  { name: 'Redmine', category: 'Tooling & Quality' },
+  { name: 'ClickUp', category: 'Tooling & Quality' },
+  { name: 'Scrum', category: 'Tooling & Quality' },
 
   // AI & Agentic Engineering
+  { name: 'Claude Code', category: 'AI & Agentic Engineering' },
   { name: 'Claude Code Subagents', category: 'AI & Agentic Engineering' },
+  { name: 'MCP (Model Context Protocol)', category: 'AI & Agentic Engineering' },
   { name: 'Prompt Engineering', category: 'AI & Agentic Engineering' },
   { name: 'LLM Integration', category: 'AI & Agentic Engineering' },
   { name: 'AI-Agentic Engineering', category: 'AI & Agentic Engineering' },
@@ -108,4 +129,13 @@ export const experience = [
   { company: 'DGT Digital Agency', period: 'May 2020 — Feb 2023' },
   { company: 'DM Human Development', period: 'Jan 2017 — Feb 2021' },
   { company: 'Superintendência de TI – UFRN', period: 'Aug 2012 — Jul 2013' },
+]
+
+export const certifications = [
+  { name: 'Claude Code 101', issuer: 'Anthropic' },
+  { name: 'Front-End Immersion', issuer: 'Alura', year: '2026' },
+  { name: 'Requirements Engineering', issuer: 'Fatto Software Consulting', year: '2023' },
+  { name: 'Agile Methodologies in Practice: Lean, Scrum, and Squads', issuer: 'Conquer School', year: '2022' },
+  { name: 'Emotional Intelligence 2.0', issuer: 'Conquer School', year: '2022' },
+  { name: 'EMPRETEC Entrepreneurship Development Program', issuer: 'Sebrae', year: '2018' },
 ]

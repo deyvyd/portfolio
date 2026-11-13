@@ -1,4 +1,4 @@
-import { experience } from '../data'
+import { experience, certifications } from '../data'
 import { useTranslation } from '../i18n'
 import { useInView } from '../hooks/useInView'
 import './Section.css'
@@ -49,6 +49,18 @@ export function About({ lang }: AboutProps) {
                 </div>
               ))}
             </div>
+
+            <span className="about__cert-label section__eyebrow">{t.about.certLabel}</span>
+            <ul className="about__certs">
+              {certifications.map(cert => (
+                <li key={cert.name} className="about__cert">
+                  <span className="about__cert-name">{cert.name}</span>
+                  <span className="about__cert-meta">
+                    {cert.issuer}{cert.year ? ` · ${cert.year}` : ''}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

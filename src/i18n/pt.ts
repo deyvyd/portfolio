@@ -4,7 +4,7 @@ export const pt: Translation = {
   meta: {
     role: "Engenheiro de Software | Engenheiro de IA Aplicada",
     tagline: "que entrega produtos\nque movem números.",
-    availability: "Disponível para remoto",
+    availability: "Disponível para remoto e relocação",
   },
   stats: [
     "de redução no tempo de geração de docs",
@@ -22,6 +22,16 @@ export const pt: Translation = {
       result:
         "89% de redução no tempo de geração, ~40h/mês economizadas, aumento direto de receita num modelo de faturamento por pontos de função. Aprovado para lançamento open-source.",
       metricLabel: "mais rápido",
+    },
+    conflow: {
+      eyebrow: "Plataforma Interna · Aiyra Engenharia de Dados",
+      problem:
+        "Demandas, commits e merge requests ficavam em três ferramentas separadas (Redmine, ClickUp e GitLab), e só o primeiro carregamento do ClickUp levava 14 minutos.",
+      solution:
+        "Projetei e construí uma plataforma (Python/FastAPI, React, PostgreSQL) que unifica as três ferramentas, vincula tarefas, commits e merge requests entre elas e expõe os dados para agentes de IA via MCP. Por cima dela, três skills do Claude Code (Redmine, ClickUp, GitLab) consultam e atualizam demandas, lançam horas e verificam deploys, com aprovação e verificação a cada alteração.",
+      result:
+        "Primeiro carregamento do ClickUp reduzido de 14 para 5 minutos. Usada diariamente pelo time.",
+      metricLabel: "min no 1º carregamento",
     },
     moneytalks: {
       eyebrow: "App de Finanças Pessoais · Em Produção",
@@ -49,7 +59,7 @@ export const pt: Translation = {
     {
       role: "Engenheiro de Software",
       summary:
-        "Liderou execução técnica e priorização de backlog para o time de desenvolvimento. Como iniciativa própria, arquitetou e construiu um motor de documentação full-stack (Vue.js, Python/Flask, Docker) para clientes do Grupo Axia (antiga Eletrobras) — 89% de redução no tempo de geração, ~40h/mês economizadas, impacto direto na receita. Atualmente atende a CAERN. Coordenou 20–30 demandas mensais no Jira e ClickUp.",
+        "Liderou execução técnica e priorização de backlog para o time de desenvolvimento, coordenando 20–30 demandas mensais e implantando processos de QA que melhoraram a estabilidade em produção e reduziram o retrabalho pós-release. Como iniciativa própria, arquitetou e construiu um motor de documentação full-stack (Vue.js, Python/Flask, Docker) para clientes do Grupo Axia (antiga Eletrobras) — 89% de redução no tempo de geração, ~40h/mês economizadas, impacto direto na receita. Construiu o Conflow, que unifica Redmine, ClickUp e GitLab via MCP, e três skills do Claude Code sobre ele. Atualmente atende a CAERN.",
     },
     {
       role: "Engenheiro de Software",
@@ -57,7 +67,7 @@ export const pt: Translation = {
         "Projetou soluções de automação de fluxo de trabalho e camadas de interface customizadas no ecossistema Amadeus GDS para otimizar operações de serviços aéreos. Construiu fluxos de UI traduzindo ações do usuário em operações automatizadas de linha de comando, reduzindo erros de entrada manual em ambientes de alto volume.",
     },
     {
-      role: "Co-fundador & Estrategista Digital",
+      role: "Especialista em Marketing Digital",
       summary:
         "Fundou e gerenciou uma agência digital para lançamentos de produtos de alto impacto. Executou 4+ lançamentos com ROI mensurável, otimizou funis de conversão via testes A/B e implantou landing pages de alto tráfego com 99,9% de uptime nos picos.",
     },
@@ -85,7 +95,7 @@ export const pt: Translation = {
     { text: "> 3 apps em produção encontrados" },
     { text: "> 89% de ganho de eficiência detectado" },
     { text: "> stack: React · TypeScript · Python · Supabase" },
-    { text: "> status: aberto a oportunidades remotas" },
+    { text: "> status: aberto a remoto e relocação" },
     { text: "> pronto.", highlight: true },
   ],
   nav: {
@@ -103,7 +113,7 @@ export const pt: Translation = {
   work: {
     eyebrow: "Trabalhos selecionados",
     title: "Projetos que\nfuncionam em produção.",
-    sub: "Três apps em produção. Usuários reais. Resultados medidos.",
+    sub: "Quatro projetos em produção. Usuários reais. Resultados medidos.",
   },
   stackSection: {
     eyebrow: "Stack técnica",
@@ -112,15 +122,16 @@ export const pt: Translation = {
   about: {
     eyebrow: "Sobre",
     title: "Engenheiro que pensa\ncomo estrategista.",
-    bio1: "Engenheiro de Software Full-Stack e Especialista em IA Aplicada com ~5 anos de experiência, baseado em Natal, RN. Atuei por vários anos como ponte técnica entre clientes do Grupo Axia (antiga Eletrobras) e o time de desenvolvimento. Atualmente atendo a CAERN, empresa de saneamento do estado do RN.",
-    bio2: "Engenharia de Computação pela UFRN (2014), Mestrado em Computação Paralela (2016). Desenvolvi soft skills por meio de coaching, treinamentos de liderança, comunicação e relacionamentos. Adquiri visão de negócio co-fundando uma agência de marketing digital, gerenciando funis de lançamento com métricas reais de aquisição. Esse background híbrido — técnico profundo, visão de negócio e habilidades humanas — é o que me diferencia: não só implemento requisitos, os questiono.",
-    bio3: "Construindo software antes de saber que era uma carreira — primeiro site em 2002 com Bloco de Notas e um editor do Netscape na escola, primeiro programa em 2005 em Pascal, também na escola. Foi aí que descobri o quanto gostava disso. Hoje busco oportunidades remotas na interseção de product thinking, desenvolvimento full-stack e IA aplicada.",
+    bio1: "Engenheiro de Software Full-Stack e Especialista em IA Aplicada com ~5 anos de experiência, baseado em São Paulo, SP. Atuei por vários anos como ponte técnica entre clientes do Grupo Axia (antiga Eletrobras) e o time de desenvolvimento. Atualmente atendo a CAERN, empresa de saneamento do estado do RN.",
+    bio2: "Engenharia de Computação pela UFRN (2014), Mestrado em Computação Paralela (ABD, sem a defesa da dissertação, 2016). Desenvolvi soft skills por meio de coaching, treinamentos de liderança, comunicação e relacionamentos. Adquiri visão de negócio co-fundando uma agência de marketing digital, gerenciando funis de lançamento com métricas reais de aquisição. Esse background híbrido — técnico profundo, visão de negócio e habilidades humanas — é o que me diferencia: não só implemento requisitos, os questiono.",
+    bio3: "Construindo software antes de saber que era uma carreira — primeiro site em 2002 com Bloco de Notas e um editor do Netscape na escola, primeiro programa em 2005 em Pascal, também na escola. Foi aí que descobri o quanto gostava disso. Hoje busco oportunidades remotas, com abertura para relocação, na interseção de product thinking, desenvolvimento full-stack e IA aplicada.",
     expLabel: "Experiência",
+    certLabel: "Certificações",
   },
   contact: {
     eyebrow: "Contato",
     title: "Vamos construir\nalgo real.",
-    sub: "Estou aberto a vagas remotas de engenharia full-stack, implementation engineering e funções de IA. Se você está trabalhando em algo interessante, vamos conversar.",
+    sub: "Estou aberto a vagas remotas ou com relocação de engenharia full-stack, implementation engineering e funções de IA. Se você está trabalhando em algo interessante, vamos conversar.",
     cta: "Enviar email",
     or: "ou me encontre no",
     copy: "Copiar email",
