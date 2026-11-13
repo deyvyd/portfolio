@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Terminal } from './Terminal'
 import { Counter } from './Counter'
 import { stats, meta } from '../data'
@@ -12,12 +11,7 @@ interface HeroProps {
 
 export function Hero({ lang }: HeroProps) {
   const { ref, inView } = useInView(0.1)
-  const [countersActive, setCountersActive] = useState(false)
   const t = useTranslation(lang)
-
-  useEffect(() => {
-    if (inView) setCountersActive(true)
-  }, [inView])
 
   return (
     <section
@@ -53,7 +47,7 @@ export function Hero({ lang }: HeroProps) {
                 value={s.value}
                 suffix={s.suffix}
                 label={t.stats[i]}
-                active={countersActive}
+                active={inView}
               />
             ))}
           </div>
