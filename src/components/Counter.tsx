@@ -8,7 +8,8 @@ interface CounterProps {
 }
 
 export function Counter({ value, suffix, label, active }: CounterProps) {
-  const [current, setCurrent] = useState(0)
+  // No prerender (sem window) já sai o valor final, para o HTML não mostrar "0%".
+  const [current, setCurrent] = useState(() => (typeof window === 'undefined' ? value : 0))
 
   useEffect(() => {
     if (!active) return

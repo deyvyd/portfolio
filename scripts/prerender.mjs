@@ -1,20 +1,19 @@
-import { preview } from 'vite'
-import puppeteer from 'puppeteer'
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { pathToFileURL } from 'node:url'
 
-const server = await preview({ preview: { port: 4173, strictPort: false } })
-const url = server.resolvedUrls.local[0]
+// Pré-renderiza o React para HTML dentro do dist/index.html, sem navegador.
+// Antes: `vite build --ssr src/entry-server.tsx --outDir dist-ssr` gera o bundle de servidor.
+const { render } = await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href)
 
-const browser = await puppeteer.launch({ headless: true })
-const page = await browser.newPage()
-await page.goto(url, { waitUntil: 'networkidle0' })
-await page.waitForSelector('footer')
+const templatePath = resolve('dist/index.html')
+const template = readFileSync(templatePath, 'utf8')
+const marker = '<div id="root"></div>'
 
-const html = await page.content()
+if (!template.includes(marker)) {
+  throw new Error(`Prerender: "${marker}" não encontrado em dist/index.html`)
+}
 
-await browser.close()
-await new Promise((res) => server.httpServer.close(res))
-
-writeFileSync(resolve('dist/index.html'), html)
+const html = template.replace(marker, () => `<div id="root">${render()}</div>`)
+writeFileSync(templatePath, html)
 console.log('Prerendered dist/index.html')
