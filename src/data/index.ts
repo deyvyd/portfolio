@@ -1,6 +1,5 @@
 export const meta = {
   name: 'Deyvyd Moura',
-  location: 'São Paulo, BR',
   email: 'deyvyd.dev@gmail.com',
   github: 'https://github.com/deyvyd',
   linkedin: 'https://linkedin.com/in/deyvyd',

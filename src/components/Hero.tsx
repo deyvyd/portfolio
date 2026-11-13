@@ -26,7 +26,7 @@ export function Hero({ lang }: HeroProps) {
         <div className="hero__left">
           <div className="hero__eyebrow">
             <span className="hero__dot" aria-hidden="true" />
-            <span>{meta.location} · {t.meta.availability}</span>
+            <span>{t.meta.location} · {t.meta.availability}</span>
           </div>
 
           <h1 className="hero__title">

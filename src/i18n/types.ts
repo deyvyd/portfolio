@@ -14,6 +14,7 @@ export interface ExperienceTranslation {
 export interface Translation {
   meta: {
     role: string
+    location: string
     tagline: string
     availability: string
   }

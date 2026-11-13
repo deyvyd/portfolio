@@ -3,6 +3,7 @@ import type { Translation } from "./types";
 export const en: Translation = {
   meta: {
     role: "Software Engineer | Applied AI Engineer",
+    location: "Brazil",
     tagline: "who ships products\nthat move numbers.",
     availability: "Available for remote and relocation",
   },
@@ -121,7 +122,7 @@ export const en: Translation = {
   about: {
     eyebrow: "About",
     title: "Engineer who thinks\nlike a strategist.",
-    bio1: "Full-Stack Software Engineer and Applied AI Engineer with ~5 years of experience, based in São Paulo, Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
+    bio1: "Full-Stack Software Engineer and Applied AI Engineer with ~5 years of experience, based in Brazil. Spent years as the technical bridge between enterprise clients in the Axia Group (formerly Eletrobras) and the dev team. Currently serving CAERN, the state water utility of Rio Grande do Norte.",
     bio2: "B.Eng. in Computer Engineering from UFRN (2014), Master's in Parallel Computing (ABD, all but the dissertation, 2016). Sharpened soft skills through coaching, leadership, and communication training. Gained business vision co-founding a digital marketing agency managing real acquisition funnels. That hybrid background — deep technical, business acumen, and human skills — is what makes the difference: I don't just implement requirements, I interrogate them.",
     bio3: "Building software since before it was a career plan — first website in 2002 with Notepad and a Netscape editor at school, first program in 2005 in Pascal. That's when I knew. Now targeting remote engineering roles, open to relocation, at the intersection of product thinking, full-stack development, and applied AI.",
     expLabel: "Experience",

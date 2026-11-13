@@ -3,6 +3,7 @@ import type { Translation } from "./types";
 export const pt: Translation = {
   meta: {
     role: "Engenheiro de Software | Engenheiro de IA Aplicada",
+    location: "Brasil",
     tagline: "que entrega produtos\nque movem números.",
     availability: "Disponível para remoto e relocação",
   },
@@ -122,7 +123,7 @@ export const pt: Translation = {
   about: {
     eyebrow: "Sobre",
     title: "Engenheiro que pensa\ncomo estrategista.",
-    bio1: "Engenheiro de Software Full-Stack e de IA Aplicada com ~5 anos de experiência, baseado em São Paulo, SP. Atuei por vários anos como ponte técnica entre clientes do Grupo Axia (antiga Eletrobras) e o time de desenvolvimento. Atualmente atendo a CAERN, empresa de saneamento do estado do RN.",
+    bio1: "Engenheiro de Software Full-Stack e de IA Aplicada com ~5 anos de experiência, baseado no Brasil. Atuei por vários anos como ponte técnica entre clientes do Grupo Axia (antiga Eletrobras) e o time de desenvolvimento. Atualmente atendo a CAERN, empresa de saneamento do estado do RN.",
     bio2: "Engenharia de Computação pela UFRN (2014), Mestrado em Computação Paralela (ABD, sem a defesa da dissertação, 2016). Desenvolvi soft skills por meio de coaching, treinamentos de liderança, comunicação e relacionamentos. Adquiri visão de negócio co-fundando uma agência de marketing digital, gerenciando funis de lançamento com métricas reais de aquisição. Esse background híbrido — técnico profundo, visão de negócio e habilidades humanas — é o que me diferencia: não só implemento requisitos, os questiono.",
     bio3: "Construindo software antes de saber que era uma carreira — primeiro site em 2002 com Bloco de Notas e um editor do Netscape na escola, primeiro programa em 2005 em Pascal, também na escola. Foi aí que descobri o quanto gostava disso. Hoje busco oportunidades remotas, com abertura para relocação, na interseção de product thinking, desenvolvimento full-stack e IA aplicada.",
     expLabel: "Experiência",

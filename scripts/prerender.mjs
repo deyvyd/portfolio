@@ -20,7 +20,7 @@ const PT = {
   url: 'https://www.deyvyd.com/pt/',
   title: 'Deyvyd Moura · Engenheiro Full-Stack e de IA Aplicada',
   description:
-    'Deyvyd Moura — Engenheiro de Software Full-Stack e de IA Aplicada em São Paulo. ~5 anos criando produtos para grandes clientes corporativos.',
+    'Deyvyd Moura — Engenheiro de Software Full-Stack e de IA Aplicada no Brasil. ~5 anos criando produtos para grandes clientes corporativos.',
   imageAlt: 'Deyvyd Moura, Engenheiro Full-Stack e de IA Aplicada',
   personDescription:
     'Engenheiro de Software Full-Stack e de IA Aplicada com cerca de 5 anos de experiência criando produtos para grandes clientes corporativos.',
