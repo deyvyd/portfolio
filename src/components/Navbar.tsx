@@ -5,10 +5,9 @@ import './Navbar.css'
 
 interface NavbarProps {
   lang: 'en' | 'pt'
-  onToggleLang: () => void
 }
 
-export function Navbar({ lang, onToggleLang }: NavbarProps) {
+export function Navbar({ lang }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [activeId, setActiveId] = useState<string | null>(null)
   const t = useTranslation(lang)
@@ -75,9 +74,15 @@ export function Navbar({ lang, onToggleLang }: NavbarProps) {
       </ul>
 
       <div className="navbar__actions">
-        <button className="navbar__lang" onClick={onToggleLang} aria-label="Toggle language">
+        <a
+          className="navbar__lang"
+          href={lang === 'en' ? '/pt/' : '/'}
+          hrefLang={lang === 'en' ? 'pt-BR' : 'en'}
+          lang={lang === 'en' ? 'pt-BR' : 'en'}
+          aria-label={lang === 'en' ? 'Ver em português' : 'View in English'}
+        >
           {lang === 'en' ? 'PT' : 'EN'}
-        </button>
+        </a>
         <a href={meta.cv} className="navbar__cv" aria-label="Download CV">
           CV ↗
         </a>

@@ -29,14 +29,15 @@ export function Hero({ lang }: HeroProps) {
             <span>{meta.location} · {t.meta.availability}</span>
           </div>
 
-          <span className="hero__name">{meta.name}</span>
-
-          <h1 className="hero__headline">
-            <span className="hero__headline-role">{t.hero.rolePrefix}</span>
-            <span className="hero__headline-main">
-              {t.meta.tagline.split('\n').map((line, i) => (
-                <span key={i} className="hero__headline-line">{line}</span>
-              ))}
+          <h1 className="hero__title">
+            <span className="hero__name">{meta.name}</span>
+            <span className="hero__headline">
+              <span className="hero__headline-role">{t.hero.rolePrefix}</span>
+              <span className="hero__headline-main">
+                {t.meta.tagline.split('\n').map((line, i) => (
+                  <span key={i} className="hero__headline-line">{line}</span>
+                ))}
+              </span>
             </span>
           </h1>
 

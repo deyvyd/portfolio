@@ -9,9 +9,9 @@ Personal portfolio built with React 19 + TypeScript + Vite. Zero UI libraries �
 | Layer | Tech |
 |---|---|
 | Framework | React 19 + TypeScript |
-| Build | Vite |
+| Build | Vite + prerender to static HTML with `react-dom/server` (`scripts/prerender.mjs`) |
 | Styling | CSS custom properties (design tokens) |
-| Animations | GSAP + CSS animations |
+| Animations | CSS animations |
 | i18n | Custom `useTranslation` hook (EN/PT) |
 | Icons | simple-icons |
 | Fonts | Space Grotesk · Inter · JetBrains Mono |

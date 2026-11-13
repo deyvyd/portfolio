@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Cursor } from './components/Cursor'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
@@ -9,14 +8,15 @@ import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import './App.css'
 
-function App() {
-  const [lang, setLang] = useState<'en' | 'pt'>('en')
-  const toggleLang = () => setLang(l => l === 'en' ? 'pt' : 'en')
+interface AppProps {
+  lang: 'en' | 'pt'
+}
 
+function App({ lang }: AppProps) {
   return (
     <>
       <Cursor />
-      <Navbar lang={lang} onToggleLang={toggleLang} />
+      <Navbar lang={lang} />
       <main>
         <Hero lang={lang} />
         <Work lang={lang} />

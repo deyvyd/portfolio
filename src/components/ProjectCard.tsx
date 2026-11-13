@@ -66,7 +66,16 @@ export function ProjectCard({ project, lang, index }: ProjectCardProps) {
         </div>
         <div className="project-card__title-row">
           {project.logo && (
-            <img src={project.logo} alt="" aria-hidden="true" className="project-card__logo" />
+            <img
+              src={project.logo}
+              alt=""
+              aria-hidden="true"
+              width={28}
+              height={28}
+              loading="lazy"
+              decoding="async"
+              className="project-card__logo"
+            />
           )}
           <h3 className="project-card__title">{project.title}</h3>
         </div>

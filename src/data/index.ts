@@ -38,9 +38,10 @@ export const projects: Array<{
   {
     id: 'conflow',
     title: 'Conflow',
+    logo: '/logo-conflow.svg',
     tags: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'MCP', 'Claude Code'],
     metric: { value: '14→5' },
-    accent: '#C084FC',
+    accent: '#2DD4E8',
     live: null,
     repo: null,
   },
