@@ -1,3 +1,6 @@
+// Gera os PNGs de favicon a partir de public/favicon.svg. Uso manual, fora do build.
+// O Puppeteer não é mais dependência do projeto (o build da Vercel não roda Chrome).
+// Para rodar: npm i --no-save puppeteer && node scripts/generate-favicons.mjs
 import puppeteer from 'puppeteer'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
