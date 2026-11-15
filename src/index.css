@@ -9,7 +9,7 @@
   --accent-glow: rgba(91, 139, 245, 0.15);
   --text:       #E8E8F0;
   --text-secondary: #9494B0;
-  --muted:      #6B6B85;
+  --muted:      #8585A3; /* contraste >= 4.8:1 sobre bg, surface e surface2 (antes #6B6B85, 3.3:1) */
   --success:    #34D399;
 
   --font-display: 'Space Grotesk', sans-serif;
