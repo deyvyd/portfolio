@@ -8,7 +8,17 @@ import { pathToFileURL } from 'node:url'
 // Antes: `vite build --ssr src/entry-server.tsx --outDir dist-ssr` gera o bundle de servidor.
 const { render } = await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href)
 
-const template = readFileSync(resolve('dist/index.html'), 'utf8')
+// Embute o CSS do site no HTML: tira uma requisição que bloqueava a renderização.
+// (O CSS não tem url(), então nenhum caminho relativo quebra.)
+function inlineCss(html) {
+  const link = /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/
+  const match = html.match(link)
+  if (!match) throw new Error('Prerender: <link> do CSS do site não encontrado em dist/index.html')
+  const css = readFileSync(resolve('dist', match[1].slice(1)), 'utf8')
+  return html.replace(link, () => `<style>${css}</style>`)
+}
+
+const template = inlineCss(readFileSync(resolve('dist/index.html'), 'utf8'))
 const marker = '<div id="root"></div>'
 
 if (!template.includes(marker)) {
